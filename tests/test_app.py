@@ -322,3 +322,10 @@ def test_the_pages_files_are_checked_again_on_every_load(client):
         if etag:
             assert client.get(path, headers={"If-None-Match": etag}).status_code == 304, path
     assert client.get("/api/status").headers.get("cache-control") != "no-cache"
+
+
+def test_favicon_ico_is_served(client):
+    # link previews and crawlers ask for /favicon.ico whatever the page's own icon says; a 404 there filled the logs
+    res = client.get("/favicon.ico")
+    assert res.status_code == 200
+    assert res.content[:4] == b"\x00\x00\x01\x00"   # an ICO file's header

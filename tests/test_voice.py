@@ -7,7 +7,7 @@ import logging
 import pytest
 from fastapi.testclient import TestClient
 
-from app import ai, areas, chatguard, floodtools, main
+from app import ai, areas, chatguard, main
 from test_place_ai import gemini_says, scripted_gemini
 
 KNOWN = areas.business("node-13414432501")[0]   # the checklist business, in the default city
