@@ -1,5 +1,7 @@
 # MyFlood
 
+> **Showcase copy.** Built by the MyFlood team for the AI Builder Cup 2026. The original repository is [puteramohammadnilam-cmd/banjir-platform](https://github.com/puteramohammadnilam-cmd/banjir-platform); the full commit history is kept here. MIT licensed (see [LICENSE](LICENSE)).
+
 MyFlood shows a small business how much river flood water a place could get in the model, and what that could roughly cost. It is an entry for the AI Builder Cup 2026.
 
 You pick a business on the map, or check any point in Malaysia by dropping a pin or using GPS. You see the modelled water depth for a 1 in 10, 20 and 50 years flood; floods bigger than 1 in 50 years are not shown. A form turns that into a rough ringgit loss. An assistant powered by Gemini answers questions about it in Bahasa Melayu or English. It reads its numbers from the data through tools, and never does the sums itself.
